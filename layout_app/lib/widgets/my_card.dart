@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  final int cardNumber;
-  const MyCard({super.key, required this.cardNumber});
+  final String message;
+  const MyCard({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +14,14 @@ class MyCard extends StatelessWidget {
           child: Row(
             children: [
 
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Expanded(
-                    flex: 1,
-                    child: Image.asset("assets/user.png")),
-              ),
+              Expanded(
+                  flex: 1,
+                  child: Image.asset("assets/user.png")),
               const SizedBox(width: 10,),
               Expanded(
                 flex: 5,
                 child: Text(
-                  "Card n° $cardNumber",
+                  message,
                   style: const TextStyle(
                       fontSize: 17, fontWeight: FontWeight.bold),
                 ),

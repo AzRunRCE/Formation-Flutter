@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:layout_app/widgets/my_card.dart';
 
 void main() {
@@ -20,8 +22,24 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  List<String> messages = ["Bonjour", "Comment tu vas ?"];
+
+  final inputTextController = TextEditingController();
+
+  onSendMessage() {
+    setState(() {
+      messages.add(inputTextController.text);
+    });
+    inputTextController.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,19 +47,33 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("titre"),
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            MyCard(cardNumber: 1),
-            MyCard(cardNumber: 2),
-            MyCard(cardNumber: 3),
-            MyCard(cardNumber: 4),
-            MyCard(cardNumber: 5),
-            MyCard(cardNumber: 6),
-            MyCard(cardNumber: 7),
-            MyCard(cardNumber: 8),
-          ],
-        ),
+      body: Column(
+        children: [
+          Expanded(
+            flex: 5,
+            child: Column(
+              children: messages.map((msg) => MyCard(message: msg)).toList(),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextFormField(
+                        controller: inputTextController,
+                        decoration: InputDecoration(
+                            border: UnderlineInputBorder(),
+                            labelText: "Votre message")),
+                  ),
+                  ElevatedButton(onPressed: onSendMessage, child: Text("Envoyer"))
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
