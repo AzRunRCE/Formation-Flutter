@@ -51,8 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Expanded(
             flex: 5,
-            child: Column(
-              children: messages.map((msg) => MyCard(message: msg)).toList(),
+            child: SingleChildScrollView(
+              child: Column(
+                children: messages.map((msg) => MyCard(message: msg)).toList(),
+              ),
             ),
           ),
           Expanded(
