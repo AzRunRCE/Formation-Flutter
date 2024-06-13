@@ -16,7 +16,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
 
   final  TextEditingController passwordEditingController = TextEditingController(text: "password");
-  final  TextEditingController emailEditingController = TextEditingController(text: "quentin@example.com" );
+  final  TextEditingController userNameEditingController = TextEditingController(text: "quentin@example.com" );
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +31,8 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 TextField(
-                  decoration: InputDecoration(labelText: 'Email'),
-                  controller:  emailEditingController,
+                  decoration: InputDecoration(labelText: 'Username'),
+                  controller:  userNameEditingController,
                 ),
                 SizedBox(height: 10),
                 TextField(
@@ -44,12 +44,12 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: () {
                     try {
-                    var user =  widget.authService.login(emailEditingController.text, passwordEditingController.text);
+                    var user =  widget.authService.login(userNameEditingController.text, passwordEditingController.text);
                     
                    Navigator.pushNamedAndRemoveUntil(
                           context, ConstantsRoutes.home, (_) => false,
                           arguments: user);
-                          
+
                     } on Exception catch (exception) {
                          ScaffoldMessenger.of(context).showSnackBar(
                      SnackBar(content: Text(exception.toString())));

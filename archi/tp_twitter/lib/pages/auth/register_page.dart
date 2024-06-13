@@ -18,7 +18,7 @@ class _RegisterPageState extends State<RegisterPage> {
       TextEditingController(text: "quentin");
   final TextEditingController passwordEditingController =
       TextEditingController(text: "password");
-  final TextEditingController emailEditingController =
+  final TextEditingController nameEditingController =
       TextEditingController(text: "quentin@example.com");
 
   @override
@@ -55,7 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ElevatedButton(
                   onPressed: () {
                     try {
-                      var user = widget.authService.register(User(usernameEditingController.text, emailEditingController.text, passwordEditingController.text) );
+                      var user = widget.authService.register(User(usernameEditingController.text, nameEditingController.text, passwordEditingController.text) );
 
                       Navigator.pushNamedAndRemoveUntil(
                           context, ConstantsRoutes.home, (_) => false,

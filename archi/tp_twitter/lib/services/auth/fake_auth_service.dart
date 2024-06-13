@@ -4,15 +4,15 @@ import '../../models/user.dart';
 
 class FakeAuthService extends AuthService {
   @override
-  User login(String email, String password) {
+  Future<User> login(String email, String password) {
     if (email == "quentin@example.com" && password == "password") {
-      return User("quentin", email, "");
+      return Future.value(User("quentin", email, ""));
     }
     throw Exception("Username/Mot de passse invalide");
   }
 
   @override
-  User register(User user) {
-    return user;
+  Future<User> register(User user) {
+    return Future.value(user);
   }
 }
