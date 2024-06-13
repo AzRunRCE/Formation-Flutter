@@ -1,0 +1,10 @@
+[
+  {
+    "Id": 1,
+    "Username": "string",
+    "Content": "string",
+    "Timestamp": "2024-06-12T10:00:59.028Z",
+    "Likes": 0,
+    "Retweets": 0
+  }
+]

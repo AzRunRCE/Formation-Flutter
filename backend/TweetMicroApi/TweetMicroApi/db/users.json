@@ -1,0 +1,123 @@
+[
+  {
+    "Id": 3,
+    "Username": "quentin.mtnz",
+    "Password": "password123",
+    "Name": "Quentin Martinez",
+    "Bio": "",
+    "Location": "",
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "2024-06-12T10:26:40.788Z"
+  },
+  {
+    "Id": 4,
+    "Username": "Leunelli",
+    "Password": "ght1CDa1€uro!",
+    "Name": "Basile Lucena",
+    "Bio": "dev",
+    "Location": "Chartres",
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "2024-06-12T13:40:22.813Z"
+  },
+  {
+    "Id": 5,
+    "Username": "antonio",
+    "Password": "antonio",
+    "Name": "antonio",
+    "Bio": null,
+    "Location": null,
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Username": "johanna",
+    "Password": "password",
+    "Name": "quentin@example.com",
+    "Bio": null,
+    "Location": null,
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 7,
+    "Username": "usernameTest2",
+    "Password": "password123",
+    "Name": "Test User2",
+    "Bio": null,
+    "Location": null,
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 8,
+    "Username": "morgane",
+    "Password": "mldp",
+    "Name": "morgane.richou@hotmail.fr",
+    "Bio": null,
+    "Location": null,
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 9,
+    "Username": "julien",
+    "Password": "mdp",
+    "Name": "tp@test.fr",
+    "Bio": null,
+    "Location": null,
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 10,
+    "Username": "quentin",
+    "Password": "password",
+    "Name": "quentin@example.com",
+    "Bio": null,
+    "Location": null,
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 11,
+    "Username": "leunelli",
+    "Password": "ght1CDa1€uro!",
+    "Name": "Basile Lucena",
+    "Bio": "dev",
+    "Location": "Chartres",
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 12,
+    "Username": "Leunellidix",
+    "Password": "ght1CDa1€uro",
+    "Name": "Basile Lucena",
+    "Bio": "dev",
+    "Location": "Chartres",
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 13,
+    "Username": "mwa",
+    "Password": "q6zrg4849e8r4q",
+    "Name": "mwa",
+    "Bio": "c mwa",
+    "Location": "ici",
+    "FollowersCount": 0,
+    "FollowingCount": 0,
+    "JoinDate": "2024-06-13T14:47:12.745Z"
+  }
+]

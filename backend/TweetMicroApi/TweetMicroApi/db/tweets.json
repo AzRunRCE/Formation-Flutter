@@ -1,0 +1,114 @@
+[
+  {
+    "Id": 16,
+    "Username": "quentin.mtnz",
+    "Content": "Bonjour je suis un nouveau tweet",
+    "Timestamp": "2024-06-13T16:01:26.0658913+02:00",
+    "Likes": 0,
+    "Retweets": 0
+  },
+  {
+    "Id": 15,
+    "Username": "antonio",
+    "Content": "test6",
+    "Timestamp": "2024-06-13T15:49:58.6050082+02:00",
+    "Likes": 0,
+    "Retweets": 0
+  },
+  {
+    "Id": 14,
+    "Username": "antonio",
+    "Content": "test5",
+    "Timestamp": "2024-06-13T15:47:33.1412914+02:00",
+    "Likes": 0,
+    "Retweets": 0
+  },
+  {
+    "Id": 13,
+    "Username": "antonio",
+    "Content": "test4",
+    "Timestamp": "2024-06-13T15:33:00.4934688+02:00",
+    "Likes": 0,
+    "Retweets": 0
+  },
+  {
+    "Id": 12,
+    "Username": "antonio",
+    "Content": "test3",
+    "Timestamp": "2024-06-13T15:24:48.7589824+02:00",
+    "Likes": 0,
+    "Retweets": 0
+  },
+  {
+    "Id": 11,
+    "Username": "antonio",
+    "Content": "test2",
+    "Timestamp": "2024-06-13T15:22:21.4980065+02:00",
+    "Likes": 0,
+    "Retweets": 0
+  },
+  {
+    "Id": 8,
+    "Username": "quentin.mtnz",
+    "Content": "mon tweet n2",
+    "Timestamp": "2024-06-13T11:45:00Z",
+    "Likes": 54,
+    "Retweets": 8
+  },
+  {
+    "Id": 6,
+    "Username": "johndoe",
+    "Content": "Randonnée dans les montagnes aujourd'hui. La vue était à couper le souffle. #nature #aventure",
+    "Timestamp": "2024-06-12T11:45:00Z",
+    "Likes": 54,
+    "Retweets": 8
+  },
+  {
+    "Id": 5,
+    "Username": "nature_lover",
+    "Content": "Randonnée dans les montagnes aujourd'hui. La vue était à couper le souffle. #nature #aventure",
+    "Timestamp": "2024-06-12T11:45:00Z",
+    "Likes": 54,
+    "Retweets": 8
+  },
+  {
+    "Id": 4,
+    "Username": "foot_fan",
+    "Content": "Quel match incroyable hier soir ! #football #championsleague",
+    "Timestamp": "2024-06-12T11:00:00Z",
+    "Likes": 76,
+    "Retweets": 12
+  },
+  {
+    "Id": 3,
+    "Username": "cuisine_addict",
+    "Content": "Recette du jour : tarte aux fraises maison. #cuisine #recette #délicieux",
+    "Timestamp": "2024-06-12T10:15:00Z",
+    "Likes": 47,
+    "Retweets": 10
+  },
+  {
+    "Id": 2,
+    "Username": "tech_guru",
+    "Content": "L'IA change le monde plus vite que nous le pensions. #technologie #innovation",
+    "Timestamp": "2024-06-12T09:30:00Z",
+    "Likes": 89,
+    "Retweets": 21
+  },
+  {
+    "Id": 1,
+    "Username": "user123",
+    "Content": "Quelle belle journée aujourd'hui ! #soleil #bonheur",
+    "Timestamp": "2024-06-12T08:45:00Z",
+    "Likes": 34,
+    "Retweets": 5
+  },
+  {
+    "Id": 17,
+    "Username": "quentin.mtnz",
+    "Content": "test tweet",
+    "Timestamp": "2024-06-13T16:01:44.7548314+02:00",
+    "Likes": 0,
+    "Retweets": 0
+  }
+]
