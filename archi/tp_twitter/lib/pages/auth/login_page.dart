@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:tp_twitter/constants.dart';
+import 'package:tp_twitter/services/auth/auth_service.dart';
+import 'package:tp_twitter/services/auth/fake_auth_service.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+
+  AuthService authService;
+
+  LoginPage({super.key, required this.authService});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  final  TextEditingController passwordEditingController = TextEditingController(text: "password");
+  final  TextEditingController emailEditingController = TextEditingController(text: "quentin@example.com" );
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 31, 132, 214),
-        title: Text(
-          "Login",
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
+     
       body: Center(
         child: Card(
           margin: EdgeInsets.all(20.0),
@@ -28,18 +32,37 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 TextField(
                   decoration: InputDecoration(labelText: 'Email'),
+                  controller:  emailEditingController,
                 ),
                 SizedBox(height: 10),
                 TextField(
                   decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
+                  controller:passwordEditingController,
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Handle login logic here
+                    try {
+                    var user =  widget.authService.login(emailEditingController.text, passwordEditingController.text);
+                    
+                   Navigator.pushNamedAndRemoveUntil(
+                          context, ConstantsRoutes.home, (_) => false,
+                          arguments: user);
+                          
+                    } on Exception catch (exception) {
+                         ScaffoldMessenger.of(context).showSnackBar(
+                     SnackBar(content: Text(exception.toString())));
+                    }
+                    
                   },
                   child: Text('Login'),
+                ),
+                   ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, ConstantsRoutes.register);
+                  },
+                  child: Text('Register'),
                 ),
               ],
             ),

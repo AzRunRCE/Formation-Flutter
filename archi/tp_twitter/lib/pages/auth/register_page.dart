@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:tp_twitter/constants.dart';
+import 'package:tp_twitter/models/user.dart';
+
+import '../../services/auth/auth_service.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+  AuthService authService;
+
+  RegisterPage({super.key, required this.authService});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  final TextEditingController usernameEditingController =
+      TextEditingController(text: "quentin");
+  final TextEditingController passwordEditingController =
+      TextEditingController(text: "password");
+  final TextEditingController emailEditingController =
+      TextEditingController(text: "quentin@example.com");
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-       appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 31, 132, 214),
         title: Text(
           "Register",
@@ -27,22 +40,32 @@ class _RegisterPageState extends State<RegisterPage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 TextField(
-                  decoration: InputDecoration(labelText: 'Username'),
+                  decoration: const InputDecoration(labelText: 'Username'),
+                  controller: usernameEditingController,
                 ),
-                TextField(
+                const TextField(
                   decoration: InputDecoration(labelText: 'Email'),
                 ),
-                SizedBox(height: 10),
-                TextField(
+                const SizedBox(height: 10),
+                const TextField(
                   decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Handle login logic here
+                    try {
+                      var user = widget.authService.register(User(usernameEditingController.text, emailEditingController.text, passwordEditingController.text) );
+
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, ConstantsRoutes.home, (_) => false,
+                          arguments: user);
+                    } on Exception catch (exception) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text(exception.toString())));
+                    }
                   },
-                  child: Text('Login'),
+                  child: Text('Register'),
                 ),
               ],
             ),
