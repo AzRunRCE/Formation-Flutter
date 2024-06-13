@@ -4,6 +4,7 @@ import 'package:tp_twitter/pages/auth/login_page.dart';
 import 'package:tp_twitter/pages/auth/register_page.dart';
 import 'package:tp_twitter/pages/create_tweet_page.dart';
 import 'package:tp_twitter/pages/home_page.dart';
+import 'package:tp_twitter/services/auth/api_auth_service.dart';
 import 'package:tp_twitter/services/auth/fake_auth_service.dart';
 
 class MyApp extends StatelessWidget {
@@ -21,8 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         ConstantsRoutes.home: (context) => const MyHomePage(title: "Twiter",),
         ConstantsRoutes.newTweet: (context) => const CreateTweetPage(),
-        ConstantsRoutes.login: (context) => LoginPage(authService: FakeAuthService(),),
-        ConstantsRoutes.register: (context) => RegisterPage(authService: FakeAuthService())
+        ConstantsRoutes.login: (context) => LoginPage(authService: ApiAuthService(ConstantsRoutes.host),),
+        ConstantsRoutes.register: (context) => RegisterPage(authService: ApiAuthService(ConstantsRoutes.host))
       },
       
     );

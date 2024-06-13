@@ -53,9 +53,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
                     try {
-                      var user = widget.authService.register(User(usernameEditingController.text, nameEditingController.text, passwordEditingController.text) );
+                      var user =  await widget.authService.register(User(usernameEditingController.text, nameEditingController.text, passwordEditingController.text) );
 
                       Navigator.pushNamedAndRemoveUntil(
                           context, ConstantsRoutes.home, (_) => false,

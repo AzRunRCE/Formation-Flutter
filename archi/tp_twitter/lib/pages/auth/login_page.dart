@@ -42,9 +42,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {
+                  onPressed: ()  async {
                     try {
-                    var user =  widget.authService.login(userNameEditingController.text, passwordEditingController.text);
+                    var user =  await widget.authService.login(userNameEditingController.text, passwordEditingController.text);
                     
                    Navigator.pushNamedAndRemoveUntil(
                           context, ConstantsRoutes.home, (_) => false,
